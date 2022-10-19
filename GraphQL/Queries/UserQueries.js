@@ -45,12 +45,4 @@ const GET_USER_BY_FILTER = {
     }
 };
 
-/*
-function getUsers(filters) {
-    return db('user')
-        .select('*')
-        .where(filters);
-}
-*/
-
 module.exports = { GET_ALL_USERS, GET_USER_BY_ID, GET_USER_BY_FILTER };

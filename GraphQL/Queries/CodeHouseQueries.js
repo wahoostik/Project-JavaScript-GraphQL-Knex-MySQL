@@ -26,12 +26,4 @@ const GET_CODE_HOUSE_BY_ID = {
     }
 };
 
-/*
-function getHouses(filters) {
-    return db('house')
-        .select('*')
-        .where(filters);
-}
-*/
-
 module.exports = { GET_ALL_CODE_HOUSES, GET_CODE_HOUSE_BY_ID };

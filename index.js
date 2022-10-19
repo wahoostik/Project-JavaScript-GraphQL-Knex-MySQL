@@ -29,11 +29,9 @@ server.use(cors({
 // GraphQL
 const { graphqlHTTP } = require('express-graphql'); // Serveur GraphQL
 const schema = require('./GraphQL/schemas');
-// const rootResolver = require('./GraphQL/resolver');
 
 server.use('/graphql', graphqlHTTP({
     schema,
-    // rootValue: rootResolver,
     graphiql: true})); // permet d'utiliser GraphiQL sur le localhost
 
 // Activation du serveur

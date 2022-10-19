@@ -6,9 +6,6 @@ const { CREATE_CODE_HOUSE, DELETE_CODE_HOUSE, UPDATE_CODE_HOUSE } = require('./M
 const { CREATE_HOUSE, DELETE_HOUSE, UPDATE_HOUSE } = require('./Mutations/HouseMutations');
 const { CREATE_USER, DELETE_USER, UPDATE_USER } = require('./Mutations/UserMutations');
 
-// const userQueries = require('./Queries/UserQueries');
-// const houseQueries = require('./Queries/HouseQueries');
-
 const RootQuery = new GraphQLObjectType({
     name: 'RootQuery',
     fields: {
@@ -47,17 +44,6 @@ const Mutation = new GraphQLObjectType({
 const schema = new GraphQLSchema({
     query: RootQuery,
     mutation: Mutation
-    /*
-    User: {
-        getAllHouses: async (user) => {
-            const arr = await Promise.all(user.GET_ALL_USERS.map(async (id) => {
-                const coms = await GET_ALL_HOUSES({ user_id: id });
-                return coms[0];
-            }));
-            return arr;
-        },
-    },
-    */
 });
 
 module.exports = schema;
