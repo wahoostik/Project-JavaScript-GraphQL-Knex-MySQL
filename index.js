@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const morgan = require('morgan');
 const cors = require('cors');
 
-const port = process.env.APP_PORT || 4500;
+const port = process.env.APP_PORT;
 const router = require('./router/router.js');
 
 // Création du serveur
